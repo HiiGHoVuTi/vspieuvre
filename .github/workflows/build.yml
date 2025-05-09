@@ -45,6 +45,9 @@ jobs:
         run: |
           nix develop --command vsce package --yarn -o vspieuvre.vsix
 
+      - name: Debug - Check if file exists
+        run: ls -l vspieuvre.vsix
+
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
